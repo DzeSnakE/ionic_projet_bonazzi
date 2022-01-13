@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/games"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouveau Jeux</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Jacquette</ion-label>
+    <ion-input type="text" [(ngModel)]="game.affiche"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Titre</ion-label>
+    <ion-input type="text" [(ngModel)]="game.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Développeur</ion-label>
+    <ion-input type="text" [(ngModel)]="game.dev"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-input type="text" [(ngModel)]="game.date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Catégories / Genres</ion-label>
+    <ion-input type="text" [(ngModel)]="game.categ"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Plateformes</ion-label>
+    <ion-input type="text" [(ngModel)]="game.plateformes"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Note ( --/20 )</ion-label>
+    <ion-input type="text" [(ngModel)]="game.note"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea rows="20" [(ngModel)]="game.description"></ion-textarea>
+  </ion-item>
+  <p class="text-center">
+    <ion-button (click)="add()">Envoyer</ion-button>
+  </p>
+</ion-content>

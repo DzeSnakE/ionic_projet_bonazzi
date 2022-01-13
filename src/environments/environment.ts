@@ -4,6 +4,13 @@
 
 export const environment = {
   firebase: {
+    apiKey: "AIzaSyAEXgCCitbzsLlvJ-cLwoC2YdNmeM0Tn60",
+    authDomain: "projetionicbonazzi.firebaseapp.com",
+    projectId: "projetionicbonazzi",
+    storageBucket: "projetionicbonazzi.appspot.com",
+    messagingSenderId: "413792918407",
+    appId: "1:413792918407:web:1f33222ce0020769519122"
+    /*
     projectId: 'films-2f0bc',
     appId: '1:484816020469:web:b810508c4ea7c4aba1b6bc',
     databaseURL: 'https://films-2f0bc-default-rtdb.firebaseio.com',
@@ -11,7 +18,7 @@ export const environment = {
     locationId: 'europe-west',
     apiKey: 'AIzaSyBvVaCQW19mHbJRd0CdbGLtIKUajnwuZaw',
     authDomain: 'films-2f0bc.firebaseapp.com',
-    messagingSenderId: '484816020469',
+    messagingSenderId: '484816020469',*/
   },
   production: false
 };

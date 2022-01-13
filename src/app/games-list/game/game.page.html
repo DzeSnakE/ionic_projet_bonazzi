@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/games"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="game">{{game.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="setModif()">Rendre Modifiable</ion-button>
+  <div *ngIf="!modif">
+    <ion-grid *ngIf="game">
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="onDelete(game.id)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <img [src]="game.affiche">
+        </ion-col>
+        <ion-col size="6">
+          <strong>Titre</strong> <br>
+          {{game.name}} <br>
+          <strong>Développeur</strong> <br>
+          {{game.dev}} <br>
+          <strong>Date</strong> <br>
+          {{game.date}} <br>
+          <strong>Catégories / Genres</strong> <br>
+          {{game.categ}} <br>
+          <strong>Plateformes</strong> <br>
+          {{game.plateformes}} <br>
+          <strong>Note ( --/20 )</strong> <br>
+          {{game.note}} <br>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <strong>Description</strong> <br>
+          <p>
+            {{game.description}}
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="modif && game">
+    <ion-item>
+      <ion-label>Affiche</ion-label>
+      <ion-input type="text" [(ngModel)]="game.affiche"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Titre</ion-label>
+      <ion-input type="text" [(ngModel)]="game.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Développeur</ion-label>
+      <ion-input type="text" [(ngModel)]="game.dev"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-input type="text" [(ngModel)]="game.date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Catégories / Genres</ion-label>
+      <ion-input type="text" [(ngModel)]="game.categ"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Plateformes</ion-label>
+      <ion-input type="text" [(ngModel)]="game.plateformes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Note ( --/20 )</ion-label>
+      <ion-input type="text" [(ngModel)]="game.note"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea rows="20" [(ngModel)]="game.description"></ion-textarea>
+    </ion-item>
+    <p class="text-center">
+      <ion-button (click)="onModif()">Modifier</ion-button>
+    </p>
+  </div>
+</ion-content>

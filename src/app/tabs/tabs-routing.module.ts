@@ -9,9 +9,9 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-      path: 'films',
-      loadChildren: () => import('../films-list/films-list.module').then(m =>
-      m.FilmsListPageModule)
+      path: 'games',
+      loadChildren: () => import('../games-list/games-list.module').then(m =>
+      m.GamesListPageModule)
       },
       {
         path: 'home',
@@ -22,6 +22,11 @@ const routes: Routes = [
         path: 'about',
         loadChildren: () => import('../about/about.module').then(m =>
           m.AboutPageModule)
+      },
+      {
+        path: 'photos',
+        loadChildren: () => import('../photos/photos.module').then(m =>
+          m.PhotosPageModule)
       },
     ]
   },
